@@ -1,0 +1,78 @@
+<view class='content'>
+  <view class='betrayal' bindtap='betrayal' wx:if="{{propA==0}}">
+    <view>叛变</view>
+  </view>
+  <view class='pk'>
+    <view class='pk-blue'>
+      <view class='blue-text'>{{propTeam[1].name}}</view>
+      <view class='blue-num'>{{propPoint.sumPoint2}}</view>
+    </view>
+    <image src="/images/pk-phone.png"></image>
+    <view class='pk-red'>
+      <view class='red-text'>{{propTeam[0].name}}</view>
+      <view class='red-num'>{{propPoint.sumPoint1}}</view>
+    </view>
+  </view>
+  <!-- 聊天 -->
+  <view class='chat'>
+    <view class='send-box'>
+      <!-- 聊天室 -->
+      <scroll-view scroll-with-animation="{{animation}}" style='max-height:{{heightInfo}}px' bindtap='cemojiCfBg' class='chat-fater' scroll-y scroll-top="{{scrollTop}}">
+        <view class='chat-content anima' wx:for="{{chatArr}}">
+          <view class='chat-box'>
+            <view class='user'>
+              <image src='{{item.avatarUrl}}'></image>
+              <text>{{item.name}}:</text>
+            </view>
+            <view class='message'>{{item.message}}</view>
+          </view>
+        </view>
+      </scroll-view>
+      <!-- 发送消息礼物 -->
+      <view class='send-message'>
+        <view class='send-input'>
+          <input placeholder-class="phcolor" value='{{message}}' bindconfirm='send' placeholder='上弹幕支持他们~' bindfocus="textAreaFocus" fixed="true" maxlength="100" auto-height bindinput="textArea"></input>
+        </view>
+        <view class='send-img-box send-gift' bindtap='showGift'>
+          <image src='/images/gift.png'></image>
+        </view>
+        <view class='send-img-box send-biaoqing' bindtap="emojiShowHide">
+          <image src='/images/biaoqing.png'></image>
+        </view>
+
+      </view>
+      <!--emoji表情盒子-->
+      <view class="emoji-box {{isShow ? 'emoji-move-in' : 'emoji-move-out'}} {{isLoad ? 'no-emoji-move' : ''}}">
+        <scroll-view scroll-y="true" bindscroll="emojiScroll" style="height:300rpx;background:#efefef">
+          <block wx:for="{{emojis}}" wx:for-item="e" wx:key="">
+            <view class="emoji-cell">
+              <image class="touch-active" catchtap="emojiChoose" src="http://soupu.oss-cn-shanghai.aliyuncs.com/emoji/{{e.emoji}}.png" data-emoji="{{e.char}}" data-oxf="{{e.emoji}}"></image>
+            </view>
+          </block>
+        </scroll-view>
+        <view class='emoji-send-box'>
+          <view bindtap='send'>发送</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 礼物效果 -->
+  <view class='gift-show-box'>
+    <scroll-view scroll-y scroll-top="{{giftTop}}" style='max-height:360rpx'> 
+      <view class='gift-content gift-anima' wx:for="{{giftArr}}">
+        <view class='show-content' style='background:url("{{item.giftInfo[0].background}}") no-repeat;background-size:100% 100%'>
+          <view class='head-img'>
+            <image src='{{item.userInfo[0].avatarUrl}}'></image>
+          </view>
+          <view class='text-content'>
+            <view class='my-name'>{{item.userInfo[0].nickName}}</view>
+            <view class='for-name'>给{{item.teamInfo||item.memberInfo}}送出了{{item.giftInfo[0].gifts_name}}</view>
+          </view>
+          <view class='gifts'>
+            <image src='{{item.giftInfo[0].icon}}'></image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--components/layer/layer.wxml-->
+<view class='success' wx:if="{{success}}">
+  <view class='img-box'>
+    <image src='../../images/success.png'></image>
+  </view>
+  <view class='text-box'>
+    <view class='success-text'>恭喜您！竞猜成功,您将获得奖励</view>
+    <view class='success-money'>{{propGetGold}}金币</view>
+    <view class='success-btn' bindtap='closeSuccess'>确 认</view>
+  </view>
+</view>
+<view class='success' wx:if="{{eorr}}">
+  <view class='img-box'>
+    <image src='../../images/fail.png'></image>
+  </view>
+  <view class='text-box'>
+    <view class='fail-text'>非常遗憾!</view>
+    <view class='fail-text' style='  position: relative; top: 10rpx'>竞猜失败，您未获得奖励</view>
+    <view class='fail-btn' bindtap='closeEorr'>我知道了</view>
+  </view>
+</view>
+<view class='layer-bg' wx:if="{{success||eorr}}"></view>

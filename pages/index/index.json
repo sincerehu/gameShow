@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "componentsLogin": "/components/login/login",
+    "componentsHome": "/components/home/home",
+    "componentsGift": "/components/gift/gift",
+    "componentsGuess": "/components/guess/guess",
+    "componentsLayer": "/components/layer/layer"
+  }
+}

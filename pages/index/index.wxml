@@ -1,0 +1,23 @@
+<view class='container'>
+  <!-- 登录页面，选择战队 -->
+  <view wx:if="{{!isLogin}}" class='box' style='background:url("https://electronic.hunterslab.cn/web/uploads/3.jpg") no-repeat;background-size:100% 100%'>
+    <componentsLogin prop-team="{{team}}" binduserInfoEven="userInfoEven"></componentsLogin>
+  </view>
+  <!-- 主页面，聊天页面 -->
+  <view wx:if="{{isLogin}}" class='box' style='background:url({{bgImg}}) no-repeat;background-size:100% 100%;position: fixed;'>
+    <componentsHome prop-giftShow="{{giftResult}}" prop-team="{{team}}" prop-result="{{result}}" prop-a="{{is_betray}}" prop-point="{{sumPoint}}" bindisShowGiftEven="isShowGiftEven"></componentsHome>
+  </view>
+  <!-- 礼物模块 -->
+  <view wx:if="{{isGift}}">
+    <componentsGift prop-member="{{member}}" prop-gold="{{gold}}" bindisHideGiftEven="isHideGiftEven"></componentsGift>
+  </view>
+  <!-- 竞猜模块 -->
+  <view wx:if="{{subject.status==1}}">
+  <!-- <view> -->
+    <componentsGuess prop-gold="{{gold}}" prop-subject="{{subject}}"></componentsGuess>
+  </view>
+  <!-- 竞猜结果弹框 -->
+  <view wx:if="{{canShow}}">
+    <componentsLayer prop-getGold="{{getGold}}" prop-guessError="{{guessError}}"></componentsLayer>
+  </view>
+</view>

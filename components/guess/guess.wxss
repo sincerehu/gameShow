@@ -1,0 +1,189 @@
+/* components/guess/guess.wxss */
+
+.guess {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  color: #000;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.title {
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.question {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+
+.btn-box {
+}
+
+.btn {
+  display: inline-block;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  border-radius: 40rpx;
+  border: 6rpx solid #f0752f;
+  padding: 10rpx 0;
+  color: #f0752f;
+  margin: 0rpx 30rpx;
+}
+
+.guess-num input {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 1px solid #ccc;
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #f0752f;
+}
+
+.place {
+  color: #f0752f;
+}
+
+.money-title {
+  text-align: left;
+  margin: 20rpx 5%;
+  color: #a0a0a0;
+}
+
+.money {
+  text-align: left;
+}
+
+.money-item {
+  display: inline-block;
+  width: 18%;
+  margin-left: 5%;
+  border: 1rpx solid #ccc;
+  padding: 10rpx 0;
+  text-align: center;
+  border-radius: 40rpx;
+}
+
+.rusult {
+  text-align: left;
+  margin: 30rpx 0 40rpx 5%;
+  color: #a0a0a0;
+}
+
+.rusult text {
+  color: #f0752f;
+}
+
+.guess-bottom {
+  text-align: left;
+  float: left;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.bottom-left {
+  margin-left: 5%;
+  float: left;
+}
+
+.bottom-left image {
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 14rpx;
+}
+
+.bottom-num {
+  margin: 0 20rpx;
+}
+
+.right-text {
+  color: #f0752f;
+  font-size: 42rpx;
+}
+
+.bottom-right {
+  float: right;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  padding: 0 60rpx;
+  background: linear-gradient(to right, #fdb436, #fb7600);
+  margin-right: 5%;
+}
+
+.guess-bg {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-act {
+  background: #f0752f;
+  color: #fff;
+}
+
+.money-hover {
+  background: #ccc;
+}
+
+.bottom-out {
+  -webkit-animation: bottom-out 0.3s forwards;
+  animation: bottom-out 0.3s forwards;
+}
+
+@-webkit-keyframes bottom-out {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: -700px;
+    opacity: 0;
+  }
+}
+
+.bottom-in {
+  -webkit-animation: bottom-in 0.3s forwards;
+  animation: bottom-in 0.3s forwards;
+}
+
+@-webkit-keyframes bottom-in {
+  0% {
+    bottom: -700px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+
+.guess-cover{
+  position: fixed;
+  right: 20rpx;
+  bottom: 30%;
+}
+
+.guess-cover image{
+  width: 120rpx;
+  height: 160rpx
+}

@@ -1,0 +1,30 @@
+<view class='contain'>
+  <view class='my-money'>
+    <view class='myself'>我的金币</view>
+    <view class='money'>
+      <image src='../../images/money.png '></image>
+      {{gold}}
+    </view>
+    <view class='info'>明细</view>
+  </view>
+  <view class='line'></view>
+  <view class='recharge-money-box'>
+    <view class='recharge-money'>充值金额</view>
+    <view class='money-list'>
+      <view class='item-money {{item.money == fee ? "act-fee" : ""}}' bindtap='getFee' wx:for="{{money}}" data-fee="{{item.money}}">
+        <view>{{item.gold}}金币</view>
+        <view>{{item.money}}元</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='choose-box'>
+    <view class='choose-text'>请选择支付方式</view>
+    <view class='choose-list'>
+      <image src='../../images/wechat.png'></image>
+      <text>微信支付</text>
+      <icon type="success" size="16" color='#8FCF00' />
+    </view>
+    <view class='recharge-btn' bindtap='pay'>立即充值</view>
+  </view>
+</view>

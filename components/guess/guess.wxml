@@ -1,0 +1,37 @@
+<view class='guess {{hideGuess?"bottom-out":"bottom-in"}}'>
+  <view class='title'>竞猜项目</view>
+  <view class='question'>{{propSubject.problem}}</view>
+  <view class='btn-box'>
+    <view class='btn {{result==1?"btn-act":""}}' bindtap='getResult' data-result="1">
+      <view class='btn-item'>{{propSubject.option1}}</view>
+      <view class='btn-num'>赔率： 1.80</view>
+    </view>
+    <view class='btn {{result==2?"btn-act":""}}' bindtap='getResult' data-result="2">
+      <view class='btn-item'>{{propSubject.option2}}</view>
+      <view class='btn-num'>赔率： 1.80</view>
+    </view>
+  </view>
+  <view class='guess-num'>
+    <input placeholder-class="place" disabled="true" bindinput="textArea" value='{{value}}'></input>
+  </view>
+  <view class='money-title'>
+    选择下注金额(可累计增加）
+  </view>
+  <view class='money'>
+    <view wx:for="{{add}}" bindtap='addMoney' data-money="{{item.money}}" hover-class="money-hover" hover-stay-time="100" class='money-item'>+ {{item.money}}</view>
+  </view>
+  <view class='rusult'>如猜中预计会得
+    <text>30000金币</text> </view>
+  <view class='guess-bottom'>
+    <view class='bottom-left' bindtap='navRecharge'>
+      <image src='../../images/money.png'></image>
+      <text class='bottom-num'>{{propGold}}</text>
+      <text class='right-text'>></text>
+    </view>
+    <view class='bottom-right' bindtap='sendPoin'>立即下注</view>
+  </view>
+</view>
+<view class='guess-bg {{hideGuess?"bottom-out":"bottom-in"}}' bindtap='closeGuess'></view>
+<view class='guess-cover' bindtap='showGuess'>
+  <image src='../../images/guess.png'></image>
+</view>

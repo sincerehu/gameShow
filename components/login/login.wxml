@@ -1,0 +1,30 @@
+<!--components/login.wxml-->
+<view class="content">
+  <view class='top-team'>
+    <view class='team-icon'>
+      <image src='{{propTeam[1].icon}}'></image>
+      <view>{{propTeam[1].name}}</view>
+    </view>
+    <view class='team-icon icon-mid'>
+      <image src='/images/vs.png'></image>
+      <view></view>
+    </view>
+    <view class='team-icon'>
+      <image src='{{propTeam[0].icon}}'></image>
+      <view>{{propTeam[0].name}}</view>
+    </view>
+
+  </view>
+  <view class='team-btn'>
+    <button style='background:url("https://electronic.hunterslab.cn/web/uploads/blue.png") no-repeat;background-size:100% 100%' open-type="getUserInfo" data-id="2" bindgetuserinfo="getUserInfo"></button>
+    <button style='background:url("https://electronic.hunterslab.cn/web/uploads/red.png") no-repeat;background-size:100% 100%' open-type="getUserInfo" data-id="1" bindgetuserinfo="getUserInfo"></button>
+  </view>
+  <view class='fonts-box'>
+    <view class='more'>
+      <image src='/images/more.png'></image>
+    </view>
+    <view class='fonts'>1、进入直播间互动前，首先请您选择您本次支持的战队方可进入互动直播大厅；</view>
+    <view class='fonts'>2、全程您可以通过 <image src='/images/phone.png'></image> 摇一摇的方式，给支持的战队增加人气值；以比赛结束为节点，我们将在人气较高战队的支持者里抽取一位观众获得幸运大奖；</view>
+    <view class='fonts'>3、进入直播互动，您可以比赛开始十分钟之前更改一次支持的战队，但之前为对方战队贡献的人气值为无效。</view>
+  </view>
+</view>

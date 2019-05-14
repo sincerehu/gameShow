@@ -1,0 +1,60 @@
+<view class='gift-content bottom-in'>
+  <view class='gift-box'>
+    <swiper indicator-dots="true">
+      <block wx:for="{{gift}}">
+        <swiper-item>
+          <view wx:for="{{gift[index]}}" class='gift-choose {{gifts_id==item.gifts_id?"isTap":""}}' data-id="{{item.gifts_id}}" data-price="{{item.price}}" bindtap='getGift'>
+            <image src="{{item.icon}}" class="slide-image" />
+            <view class='gift-name'>{{item.gifts_name}}</view>
+            <view class='gift-money'>{{item.price}}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='navbar'>
+    <view class='give {{act==0?"act":""}}' data-act="0" bindtap="getAct">
+      <view>送战队</view>
+      <text></text>
+    </view>
+    <view class='give {{act==1?"act":""}}' data-act="1" bindtap="getAct">
+      <view>送选手</view>
+      <text></text>
+    </view>
+    <view class='font-gift'>请选择赠送对象</view>
+  </view>
+  <view class='choose-team'>
+    <swiper class='swiper' indicator-dots="{{dots}}" duration="200" current="{{act}}" bindchange="swiperChange">
+      <block>
+        <swiper-item class="item-box">
+          <view class='team-box {{teamid==2?"team-act":""}}' data-teamid="{{team[1].id}}" bindtap='getTeam'>
+            <image src='{{team[1].icon}}'></image>
+            <view>{{team[1].name}}</view>
+          </view>
+          <image class='team-vs' src='/images/vs.png'></image>
+          <view class='team-box {{teamid==1?"team-act":""}}' data-teamid="{{team[0].id}}" bindtap='getTeam'>
+            <image src='{{team[0].icon}}'></image>
+            <view>{{team[0].name}}</view>
+          </view>
+        </swiper-item>
+        <swiper-item class="item-box-person">
+          <block wx:for="{{member}}">
+            <view class='person-box {{personid==item.id?"person-act":""}}' data-id="{{item.id}}" bindtap='getPerson'>
+              <image src='{{item.head}}'></image>
+              <view>{{item.name}}</view>
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='btn-box'>
+    <view class='addMoney' bindtap='navRecharge'>
+      <image src='/images/money.png'></image>
+      <text>{{propGold}}</text>
+      <view>></view>
+    </view>
+    <view class='send-btn' bindtap="sendGift">发送</view>
+  </view>
+</view>
+<view class='gift-bg' bindtap='hideGift'></view>

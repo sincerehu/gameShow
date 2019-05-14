@@ -1,0 +1,409 @@
+/* components/home/home.wxss */
+
+.content {
+  font-size: 26rpx;
+}
+
+.betrayal {
+  text-align: center;
+  font-size: 24rpx;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.betrayal view {
+  display: inline-block;
+  background-color: rgba(220, 220, 220, 0.2);
+  padding: 10rpx 50rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.pk {
+  width: 100%;
+  text-align: center;
+  font-size: 20rpx;
+  position: fixed;
+  top: 50rpx;
+}
+
+.blue-text {
+  padding-right: 4rpx;
+  margin-bottom: 8rpx;
+}
+
+.red-text {
+  padding-left: 4rpx;
+  margin-bottom: 8rpx;
+}
+
+.red-num {
+  display: inline-block;
+  font-size: 18rpx;
+  width: 60rpx;
+  background: linear-gradient(to right, #c20b18, #fb605b);
+  border-radius: 30rpx;
+  padding: 2rpx 20rpx;
+}
+
+.blue-num {
+  display: inline-block;
+  font-size: 18rpx;
+  width: 120rpx;
+  background: linear-gradient(to left, #1064c4, #3dd4fa);
+  border-radius: 30rpx;
+  padding: 2rpx 20rpx;
+}
+
+.pk-blue {
+  display: inline-block;
+  width: 280rpx;
+  text-align: right;
+}
+
+.pk-red {
+  display: inline-block;
+  width: 280rpx;
+  text-align: left;
+}
+
+.pk image {
+  width: 90rpx;
+  height: 90rpx;
+  display: inline-block;
+  margin: 0 20rpx;
+  position: relative;
+  top: 20rpx;
+}
+
+/* 聊天 */
+
+.send-box {
+  position: fixed;
+  bottom: 0;
+}
+
+.send-message {
+  margin: 20rpx 0rpx 40rpx 0rpx;
+}
+
+.send-box {
+  width: 100%;
+}
+
+.send-img-box {
+  /* display: inline-block; */
+  float: right;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-right: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  border-radius: 35rpx;
+}
+
+.send-img-box image {
+  display: inline-block;
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: 13rpx;
+}
+
+.send-input {
+  display: inline-block;
+  width: 450rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 66rpx;
+  position: relative;
+  top: 6rpx;
+  border-radius: 33rpx;
+  padding: 0 30rpx;
+  margin-left: 30rpx;
+}
+
+.send-input input {
+  padding: none;
+  /* margin: none; */
+  border: none;
+  margin: 12rpx 0;
+}
+
+.phcolor {
+  color: #a2a4b0;
+}
+
+.chat-content {
+  width: 100%;
+  padding: 0 30rpx 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.anima {
+  -webkit-animation: left-in 0.3s forwards;
+  animation: left-in 0.3s forwards;
+}
+
+@-webkit-keyframes left-in {
+  0% {
+    margin-left: -375px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.gift-anima {
+  -webkit-animation: gift-left-in 6s forwards;
+  animation: gift-left-in 6s forwards;
+}
+
+@-webkit-keyframes gift-left-in {
+  0% {
+    margin-left: -375px;
+    opacity: 0;
+  }
+
+  10% {
+    margin-left: 0;
+    opacity: 1;
+  }
+
+  90% {
+    margin-left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    /* margin-left: 0;
+    opacity: 1; */
+    margin-left: -375px;
+    opacity: 0;
+  }
+}
+
+.chat-box {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  border-radius: 36rpx;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.user {
+  float: left;
+}
+
+.user image {
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+}
+
+.user text {
+  float: left;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  margin: 0 10rpx;
+  color: #a2a4b0;
+}
+
+.message {
+  float: left;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  max-width: 70%;
+}
+
+/* emoji */
+
+.emoji-box {
+  position: relative;
+  height: 390rpx;
+  padding: 5px 0;
+  box-sizing: border-box;
+  margin-bottom: -480rpx;
+  background: #fff;
+  opacity: 0;
+}
+
+.emoji-cell {
+  width: 9.09%;
+  height: 66rpx;
+  display: inline-block;
+}
+
+.emoji-cell image {
+  width: 46rpx;
+  height: 46rpx;
+  padding: 10rpx;
+  border-radius: 6rpx;
+}
+
+.emoji-move-in {
+  -webkit-animation: emoji-move-in 0.3s forwards;
+  animation: emoji-move-in 0.3s forwards;
+}
+
+.emoji-move-out {
+  -webkit-animation: emoji-move-out 0.3s forwards;
+  animation: emoji-move-out 0.3s forwards;
+}
+
+.no-emoji-move {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes emoji-move-in {
+  0% {
+    margin-bottom: -390rpx;
+    opacity: 0;
+  }
+
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes emoji-move-in {
+  0% {
+    margin-bottom: -390rpx;
+    opacity: 0;
+  }
+
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+
+  100% {
+    margin-bottom: -390rpx;
+    opacity: 0;
+  }
+}
+
+@keyframes emoji-move-out {
+  0% {
+    margin-bottom: 0;
+  }
+
+  100% {
+    margin-bottom: -390rpx;
+  }
+}
+
+@-webkit-keyframes pd-left-move {
+  0% {
+    padding-left: 10rpx;
+  }
+
+  100% {
+    padding-left: 30rpx;
+  }
+}
+
+@keyframes pd-left-move {
+  0% {
+    padding-left: 10rpx;
+  }
+
+  100% {
+    padding-left: 30rpx;
+  }
+}
+
+.emoji-send-box {
+  text-align: right;
+  margin-top: 18rpx;
+}
+
+.emoji-send-box view {
+  margin-right: 20rpx;
+  display: inline-block;
+  /* color: fdb436 */
+  height: 40rpx;
+  width: 120rpx;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(to right, #fdb436, #fb7600);
+}
+
+.gift-show-box {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 40%;
+  z-index: 3;
+  max-height: 360rpx;
+  overflow: auto;
+}
+
+.gift-content {
+  width: 100%;
+  height: 170rpx;
+}
+
+.show-content {
+  width: 76%;
+  height: 120rpx;
+  float: left;
+  margin-left: 20rpx;
+  background: #000;
+  border-radius: 70rpx;
+  margin-top: 50rpx;
+}
+
+.head-img {
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.head-img image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+}
+
+.gifts image {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 80rpx;
+}
+
+.gifts {
+  float: right;
+  position: relative;
+  bottom: 36rpx;
+  left: 40rpx;
+}
+
+.text-content {
+  float: left;
+  margin-left: 20rpx;
+  line-height: 42rpx;
+  margin-top: 20rpx;
+}
+
+.my-name {
+  font-size: 28rpx;
+  color: #f7fc04;
+}
+
+.for-name {
+  font-size: 24rpx;
+}

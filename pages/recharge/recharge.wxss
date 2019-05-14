@@ -1,0 +1,139 @@
+/* pages/recharge/recharge.wxss */
+
+page {
+  color: #000;
+  font-size: 32rpx;
+  padding: 0;
+  margin: 0;
+}
+
+.my-money {
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+.myself {
+  font-size: 40rpx;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.money {
+  display: inline-block;
+  margin: 0 20rpx;
+}
+
+.act-fee {
+  background: #f27300;
+  color: #fff;
+}
+
+.money image {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 6rpx;
+  margin-right: 10rpx;
+}
+
+.info {
+  float: right;
+  color: #818181;
+}
+
+.line {
+  height: 10rpx;
+  background: #f0f0f0;
+}
+
+.recharge-money-box {
+}
+
+.recharge-money {
+  font-size: 40rpx;
+  font-weight: 600;
+  padding: 40rpx;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.money-list {
+  margin-top: 30rpx;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.item-money {
+  width: 28%;
+  margin-left: 4%;
+  float: left;
+  /* display: inline-block; */
+  text-align: center;
+  border: 1px solid #d5d5d5;
+  border-radius: 20rpx;
+  padding: 18rpx 0;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+
+.item-money view:first-child {
+  font-weight: bold;
+}
+
+.item-money view:last-child {
+  font-size: 26rpx;
+}
+
+.choose-box {
+  padding: 40rpx;
+  box-sizing: border-box;
+  clear: both;
+  padding-top: 80rpx;
+}
+
+.choose-text {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.choose-list {
+  line-height: 80rpx;
+  width: 100%;
+  float: left;
+  margin-top: 50rpx;
+}
+
+.choose-list image {
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+}
+
+.choose-list text {
+  float: left;
+  margin-left: 20rpx;
+  color: #313131;
+}
+
+.choose-list icon {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  line-height: 0;
+  float: right;
+}
+
+.recharge-btn {
+  text-align: center;
+  width: 90%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 80rpx;
+  margin-left: 5%;
+  float: left;
+  background: linear-gradient(to right, #fdb436, #fb7600);
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 50rpx;
+}

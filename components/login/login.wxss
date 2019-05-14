@@ -1,0 +1,78 @@
+/* components/login.wxss */
+
+.content {
+  width: 100%;
+}
+
+button {
+  border: none !important;
+}
+
+.top-team {
+  margin-top: 200rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.team-icon {
+  display: inline-block;
+}
+
+.team-icon image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+
+.icon-mid image {
+  margin: 0rpx 70rpx;
+  width: 100rpx;
+  height: 85rpx;
+  margin-bottom: 60rpx;
+}
+
+.team-icon view {
+  margin-top: 20rpx;
+}
+
+.team-btn {
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.team-btn button {
+  display: inline-block;
+  width: 35%;
+  height: 90rpx;
+  margin: 0 40rpx;
+}
+
+.more {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.more image {
+  width: 300rpx;
+  height: 40rpx;
+}
+
+.fonts {
+  font-size: 26rpx;
+  padding: 0 60rpx;
+  margin-bottom: 40rpx;
+}
+
+.fonts image {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+}
+
+.fonts-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 40rpx;
+  color: #a2a4b0;
+}
