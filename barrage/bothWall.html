@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电竞互动</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/barrager.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/wall.css">
+</head>
+
+<body class="bb-js">
+    <!-- <div class="container">
+        <section class="bb-section">
+            <button class="bb-trigger btn btn-primary btn-lg  bb-light-blue" onclick="run_example()">
+                弹弹弹</button>
+        </section>
+    </div> -->
+    <div id="left">
+        <!-- 互动部分 -->
+        <div class="show-box-left">
+            <div class="float-left">
+                <!-- 礼物展示 -->
+                <div class="gift both-left" style=" max-height: 1.8rem;overflow: hidden; padding-right: .3rem;">
+                    <!-- <div class="gift-box">
+                        <img class="gift-name" src="static/img/18.png" alt="">
+                        <div class="gift-text">
+                            <div>胖大海</div>
+                            <div>给sincere送出的甜甜圈</div>
+                        </div>
+                        <img class="gift-show" src="static/img/18.png" alt="">
+                    </div> -->
+                </div>
+                <!-- pk -->
+                <div class="pk">
+                    <div class="float-left pk-img">
+                        <img src="static/img/phone.png" alt="">
+                    </div>
+                    <div class="float-left pk-num">
+                        <div class="team-box">
+                            <div class="team-name">EDG</div>
+                            <div class="team-pro">213</div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-name">RNG</div>
+                            <div class="team-pro-blue">213</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="float-right list-box" style="position: absolute;right: 0;bottom: .2rem">
+                <div class="title">
+                    <img src="./static/img/01.png" alt="">
+                </div>
+                <div class="list">
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/1.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大12werwer 321海</div>
+                    </div>
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/2.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大12werw</div>
+                    </div>
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/3.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="right">
+        <div class="show-box-right">
+            <div class="float-right">
+                <!-- 礼物展示 -->
+                <div class="gift both-right" style=" max-height: 1.8rem;overflow: hidden;padding-left: .3rem;">
+                    <!-- <div class="gift-box-left">
+                        <img class="gift-show-left" src="static/img/18.png" alt="">
+                        <div class="gift-text-left">
+                            <div>胖大海</div>
+                            <div>给sincere送出的甜甜圈</div>
+                        </div>
+                        <img class="gift-name" src="static/img/18.png" alt="">
+                    </div> -->
+                </div>
+                <!-- pk -->
+                <div class="pk-left">
+                    <div class="float-right pk-img">
+                        <img src="static/img/phone.png" alt="">
+                    </div>
+                    <div class="float-right pk-num">
+                        <div class="team-box">
+                            <div class="team-name">EDG</div>
+                            <div style="height:.3rem">
+                                <div class="team-pro float-right">213</div>
+                            </div>
+                        </div>
+                        <div class="team-box">
+                            <div class="team-name">RNG</div>
+                            <div style="height:.3rem">
+                                <div class="team-pro-blue float-right">213</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="float-left list-box" style="position: absolute;left: 0;bottom: .2rem">
+                <div class="title">
+                    <img src="./static/img/01.png" alt="">
+                </div>
+                <div class="list">
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/1.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大12werwer 321海</div>
+                    </div>
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/2.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大12werw</div>
+                    </div>
+                    <div class="list-item">
+                        <img class="item-number" src="./static/img/3.png" alt="">
+                        <img class="item-header" src="./static/img/18.png" alt="">
+                        <div>胖大1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS dependencies -->
+    <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="static/js/rem.js"></script>
+    <script type="text/javascript" src="dist/js/jquery.barrager.js"></script>
+    <script type="text/javascript" src="dist/js/until.js"></script>
+    <script type="text/javascript">
+        window.onresize = function () {
+            $('#left').css('width', $(window).width() / 2)
+            $('#right').css('width', $(window).width() / 2)
+        }
+        $('#left').css('width', $(window).width() / 2)
+        $('#right').css('width', $(window).width() / 2)
+        $(function () {
+            // socket(function (e) {
+            //     console.log(e)
+            //     if (e.type == "barrage") {
+            //         run_example(e)
+            //     } else if (e.type == "sendgift") {
+            //         addGift(e.result)
+            //         addGifts(e.result)
+            //     }
+            // })
+            ws.onmessage = function (message) {
+                let e = message.data,data
+                if (typeof (e) == 'string') {
+                    data = JSON.parse(e)
+                }
+                if (data.type == "barrage") {
+                    run_example(data)
+                } else if (data.type == "sendgift") {
+                    addGift(data.result)
+                    addGifts(data.result)
+                }
+            }
+            function addGifts(e) {
+                var html = "", oldHtml = $('.both-right').html();
+                var time = new Date().getTime();
+                var nowId = "both-right" + time
+                var who = null;
+                if (e.teamInfo) {
+                    who = e.teamInfo
+                } else {
+                    who = e.memberInfo
+                }
+                html = html + '<div class="gift-box-left" id=' + nowId + '>' +
+                    '<img class="gift-show-left" src="' + e.giftInfo[0].icon + '" alt="">' +
+                    '<div class="gift-text-left">' +
+                    '<div>' + e.userInfo[0].nickName + '</div>' +
+                    '<div>给' + who + '送出的' + e.giftInfo[0].gifts_name + '</div>' +
+                    '</div>' +
+                    '<img class="gift-name" src="' + e.userInfo[0].avatarUrl + '" alt="">' +
+                    '</div> ';
+
+                $(".both-right").append(html)
+                $('#' + nowId).addClass('right-in')
+                if ($('.both-right').children("div").length > 2) {
+                    $('.both-right div')[0].setAttribute("class", "gift-box top-out");
+                    setTimeout(() => {
+                        $('.both-right div')[0].remove();
+                    }, 300);
+                }
+                setTimeout(() => {
+                    $('#' + nowId).remove()
+                }, 6300);
+            }
+            function addGift(e) {
+                var html = "", oldHtml = $('.both-left').html();
+                var time = new Date().getTime();
+                var nowId = "gift" + time
+                var who = null;
+                if (e.teamInfo) {
+                    who = e.teamInfo
+                } else {
+                    who = e.memberInfo
+                }
+                html = html + '<div class="gift-box" id=' + nowId + '>' +
+                    '<img class="gift-name" src="' + e.userInfo[0].avatarUrl + '" alt="">' +
+                    '<div class="gift-text">' +
+                    '<div>' + e.userInfo[0].nickName + '</div>' +
+                    '<div>给' + who + '送出的' + e.giftInfo[0].gifts_name + '</div>' +
+                    '</div>' +
+                    '<img class="gift-show" src="' + e.giftInfo[0].icon + '" alt="">' +
+                    '</div> ';
+                $(".both-left").append(html)
+                $('#' + nowId).addClass('left-in')
+                if ($('.both-left').children("div").length > 2) {
+                    $('.both-left div')[0].setAttribute("class", "gift-box top-out");
+                    setTimeout(() => {
+                        $('.both-left div')[0].remove();
+                    }, 300);
+                }
+                setTimeout(() => {
+                    $('#' + nowId).remove()
+                }, 6300);
+            }
+            $('#left').css('width', $(window).width() / 2)
+            $('#right').css('width', $(window).width() / 2)
+            function run_example(e) {
+                var example_item = { 'img': e.result.userInfo[0].avatarUrl, 'name': e.result.userInfo[0].nickName, 'info': e.result.content[0].content, "isshow": "#left", "odd": false };
+                var example_item2 = { 'img': e.result.userInfo[0].avatarUrl, 'name': e.result.userInfo[0].nickName, 'info': e.result.content[0].content, "isshow": "#right", "odd": false };
+                $('body').barrager(example_item);
+                $('body').barrager(example_item2);
+                return false;
+            }
+        })
+
+    </script>
+</body>
+
+</html>
